@@ -2,7 +2,7 @@
 
 Unofficial SoapUI Open Source Flatpak package.
 
-Currently waiting for [official response](https://github.com/SmartBear/soapui/issues/744) as is recommended by the [Flathub App Submission](https://github.com/flathub/flathub/wiki/App-Submission) page.
+Waiting for [official response](https://github.com/SmartBear/soapui/issues/744) in order to give them the control of this repository.
 
 ## Permissions
 
