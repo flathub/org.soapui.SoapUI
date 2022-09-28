@@ -20,9 +20,9 @@ Currently accessing to external web pages is not working due to this [external i
 
 Since the application folder is readonly it has been enabled the following paths have been set:
 
-- User external actions: `~/.var/app/org.soapui.SoapUI/.soapuios/actions`
-- User external extensions: `~/.var/app/org.soapui.SoapUI/.soapuios/ext`
-- User external libraries: `~/.var/app/org.soapui.SoapUI/.soapuios/listeners`
+- User external actions: `~/.var/app/org.soapui.SoapUI/.soapuios/actions/`
+- User external extensions: `~/.var/app/org.soapui.SoapUI/.soapuios/ext/`
+- User external listeners: `~/.var/app/org.soapui.SoapUI/.soapuios/listeners/`
 - User plugins: `~/.var/app/org.soapui.SoapUI/.soapuios/plugins/`
 - User properties: `~/.var/app/org.soapui.SoapUI/.soapuios/soapui.properties`
 

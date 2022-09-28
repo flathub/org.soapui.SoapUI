@@ -6,17 +6,28 @@ SOAPUI_JAR=`ls /app/bin/soapui-*.jar`
 JFXRTPATH="/app/jre/lib/jfxrt.jar"
 SOAPUI_CLASSPATH=$JFXRTPATH:$SOAPUI_JAR:$SOAPUI_HOME/lib/*:$XDG_DATA_HOME/soapuios/lib/*
 
+# Using ~/.soapuios since it is already hardcoded in SoapUI for other files
+SOAPUI_CONFIG_HOME="$HOME/.soapuios"
+
+# Define paths in the user folder so it can add their own files
+SOAPUI_EXT_LIBRARIES="${SOAPUI_CONFIG_HOME}/ext"
+SOAPUI_EXT_LISTENERS="${SOAPUI_CONFIG_HOME}/listeners"
+SOAPUI_EXT_ACTIONS="${SOAPUI_CONFIG_HOME}/actions"
+
+# Initialize the configuration folders and files
+mkdir -p "$SOAPUI_CONFIG_HOME" "$SOAPUI_EXT_LIBRARIES" "$SOAPUI_EXT_LISTENERS" "$SOAPUI_EXT_ACTIONS"
+# [ -e "$SOAPUI_CONFIG_HOME/soapui.properties" ] || touch "$SOAPUI_CONFIG_HOME/soapui.properties"
 # Hacks to allow persist configuration across executions since persist option don't work well with plain files
-[ -e "$HOME/default-soapui-workspace.xml" ] || ln -s "$HOME/.soapuios/default-soapui-workspace.xml" "$HOME/default-soapui-workspace.xml"
-[ -e "$HOME/soapui-settings.xml" ] || ln -s "$HOME/.soapuios/soapui-settings.xml" "$HOME/soapui-settings.xml"
+[ -e "$HOME/default-soapui-workspace.xml" ] || ln -s "$SOAPUI_CONFIG_HOME/default-soapui-workspace.xml" "$HOME/default-soapui-workspace.xml"
+[ -e "$HOME/soapui-settings.xml" ] || ln -s "$SOAPUI_CONFIG_HOME/soapui-settings.xml" "$HOME/soapui-settings.xml"
 
 #JAVA OPTS
 JAVA_OPTS="-Xms128m -Xmx1024m -XX:MinHeapFreeRatio=20 -XX:MaxHeapFreeRatio=40"
-JAVA_OPTS="$JAVA_OPTS -Dsoapui.properties=$HOME/.soapuios/soapui.properties"
+JAVA_OPTS="$JAVA_OPTS -Dsoapui.properties=${SOAPUI_CONFIG_HOME}/soapui.properties"
 JAVA_OPTS="$JAVA_OPTS -Dsoapui.home=${SOAPUI_HOME}/bin -splash:SoapUI-Spashscreen.png"
-JAVA_OPTS="$JAVA_OPTS -Dsoapui.ext.libraries=$HOME/.soapuios/ext"
-JAVA_OPTS="$JAVA_OPTS -Dsoapui.ext.listeners=$HOME/.soapuios/listeners"
-JAVA_OPTS="$JAVA_OPTS -Dsoapui.ext.actions=$HOME/.soapuios/actions"
+JAVA_OPTS="$JAVA_OPTS -Dsoapui.ext.libraries=${SOAPUI_EXT_LIBRARIES}"
+JAVA_OPTS="$JAVA_OPTS -Dsoapui.ext.listeners=${SOAPUI_EXT_LISTENERS}"
+JAVA_OPTS="$JAVA_OPTS -Dsoapui.ext.actions=${SOAPUI_EXT_ACTIONS}"
 JAVA_OPTS="$JAVA_OPTS -Djava.library.path=${SOAPUI_HOME}/bin"
 JAVA_OPTS="$JAVA_OPTS -Dwsi.dir=${SOAPUI_HOME}/wsi-test-tools"
 #uncomment to disable browser component
