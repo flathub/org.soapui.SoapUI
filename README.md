@@ -12,10 +12,6 @@ Waiting for [official response](https://github.com/SmartBear/soapui/issues/744) 
 - Network (to allow perfonming the actual tests)
 - Documents folder (to load and save project files)
 
-## Known issues
-
-Currently accessing to external web pages is not working due to this [external issue](https://github.com/flathub/org.freedesktop.Sdk.Extension.openjdk17/issues/1).
-
 ## Special configurations and workarrounds
 
 Since the application folder is readonly it has been enabled the following paths have been set:
