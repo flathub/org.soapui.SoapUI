@@ -8,7 +8,7 @@ Waiting for [official response](https://github.com/SmartBear/soapui/issues/744) 
 
 ## Permissions
 
-- GUI: x11,ipc,dri
+- GUI: x11,ipc
 - Network (to allow perfonming the actual tests)
 - Documents folder (to load and save project files)
 
