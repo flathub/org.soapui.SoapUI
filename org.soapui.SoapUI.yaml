@@ -8,7 +8,6 @@ sdk-extensions:
 
 command: soapui-launcher.sh
 finish-args:
-  - --device=dri
   - --socket=x11
   - --share=ipc
   - --share=network
