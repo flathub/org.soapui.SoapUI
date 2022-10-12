@@ -8,6 +8,11 @@
   <summary>SoapUI OS is a functional testing solution for APIs and web services</summary>
   <description>
     <p>SoapUI Open Source alows developers and testers to explore and perform functional tests in REST, SOAP, and GraphQL APIs.</p>
+    <p>Folders used:</p>
+    <ul>
+      <li>Open and save files: the user Documents folder (use Flatseal to allow acces to other folders)</li>
+      <li>User app directory: <i>~/.var/app/org.soapui.SoapUI/.soapuios/</i></li>
+    </ul>
   </description>
   <url type="homepage">https://www.soapui.org/</url>
   <url type="bugtracker">https://github.com/SmartBear/soapui/issues</url>
