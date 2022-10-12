@@ -11,7 +11,7 @@
     <p>Folders used:</p>
     <ul>
       <li>Open and save files: the user Documents folder (use Flatseal to allow acces to other folders)</li>
-      <li>User app directory: <i>~/.var/app/org.soapui.SoapUI/.soapuios/</i></li>
+      <li>User directory for settings, actions, listeners, extensions and plugins: ~/.var/app/org.soapui.SoapUI/.soapuios/</li>
     </ul>
   </description>
   <url type="homepage">https://www.soapui.org/</url>
