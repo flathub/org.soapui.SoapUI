@@ -5,9 +5,9 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>EUPL-1.1</project_license>
   <developer_name>SmartBear Software</developer_name>
-  <summary>SoapUI OS is a functional testing solution for APIs and web services</summary>
+  <summary>Testing solution for APIs</summary>
   <description>
-    <p>SoapUI Open Source alows developers and testers to explore and perform functional tests in REST, SOAP, and GraphQL APIs.</p>
+    <p>SoapUI is the world's leading Functional Testing tool for SOAP and REST testing. With its easy-to-use graphical interface, and enterprise-class features, SoapUI allows you to easily and rapidly create and execute automated functional, regression, and load tests.</p>
     <p>Folders used:</p>
     <ul>
       <li>Open and save files: the user Documents folder (use Flatseal to allow acces to other folders)</li>
@@ -23,22 +23,66 @@
   <url type="contribute">http://www.soapui.org/Developers-Corner/contribute-to-soapui.html</url>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/flathub/org.soapui.SoapUI/master/screenshots/1.png</image>
+      <image>https://raw.githubusercontent.com/flathub/org.soapui.SoapUI/master/screenshots/soap.png</image>
+      <caption>Testing SOAP API</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/flathub/org.soapui.SoapUI/master/screenshots/2.png</image>
+      <image>https://raw.githubusercontent.com/flathub/org.soapui.SoapUI/master/screenshots/rest.png</image>
+      <caption>Testing REST API</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/flathub/org.soapui.SoapUI/master/screenshots/settings.png</image>
+      <caption>Settings window</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/flathub/org.soapui.SoapUI/master/screenshots/formview.png</image>
+      <caption>Test as HTML form</caption>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1"/>
+  <!--
+    More relases info:
+      https://www.soapui.org/downloads/latest-release/release-notes/
+      https://github.com/SmartBear/soapui/blob/next/RELEASENOTES.txt
+      https://github.com/SmartBear/soapui/releases
+  -->
   <releases>
-    <release version="5.7.2" date="2023-11-07"/>
-    <release version="5.7.1" date="2023-08-01"/>
-    <!-- https://github.com/SmartBear/soapui/releases -->
+    <release version="5.7.2" date="2023-11-07">
+      <description>
+        <p>Fixed a vulnerability related to ZipSlip attack (Path Traversal) and made some updates by removing references to previous State of Software Quality API surveys.</p>
+      </description>
+    </release>
+    <release version="5.7.1" date="2023-08-01">
+      <description>
+        <p>Fixed an issue where SoapUI version 5.6.0 and 5.7.0 would not install or open on certain machines including Mac OS Ventura.</p>
+      </description>
+    </release>
     <release version="5.7.0" date="2022-01-12">
       <description>
         <p>GraphQL Support</p>
         <p>Built-in OpenAPI (Swagger) support</p>
       </description>
     </release>
+    <release version="5.6.1" date="2021-12-20">
+      <description>
+        <p>This release updates the Apache Log4j library to v. 2.16 that mitigates CVE-2021-44228 (Log4Shell) and CVE-2021-45046.</p>
+      </description>
+    </release>
+    <release version="5.6.0" date="2020-09-07">
+      <description>
+        <p>Update dependencies and removed useless jars. Jackson, KeenIO.</p>
+      </description>
+    </release>
+    <!-- Old relases commented out
+    <release version="5.5.0" date="2019-02-06"/>
+    <release version="5.4.0" date="2017-11-29"/>
+    <release version="5.3.0" date="2016-11-30"/>
+    <release version="5.2.1" date="2015-10-02"/>
+    <release version="5.2.0" date="2015-07-02"/>
+    <release version="5.1.3" date="2015-04-01"/>
+    <release version="5.1.2" date="2015-03-11"/>
+    <release version="5.0.1" date="2014-05-27"/>
+    <release version="5.0.0" date="2014-04-09"/>
+    -->
   </releases>
 </component>
