@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
+<component type="desktop-application">
   <id>org.soapui.SoapUI</id>
   <name>SoapUI Open Source</name>
   <metadata_license>CC0-1.0</metadata_license>
@@ -14,6 +14,7 @@
       <li>User directory for settings, actions, listeners, extensions and plugins: ~/.var/app/org.soapui.SoapUI/.soapuios/</li>
     </ul>
   </description>
+  <launchable type="desktop-id">org.soapui.SoapUI.desktop</launchable>
   <url type="homepage">https://www.soapui.org/</url>
   <url type="bugtracker">https://github.com/SmartBear/soapui/issues</url>
   <url type="faq">https://community.smartbear.com/t5/SoapUI-Open-Source/bd-p/SoapUI_OS</url>
