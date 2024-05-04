@@ -23,5 +23,10 @@ Since the application folder is readonly it has been enabled the following paths
 - User properties: `~/.var/app/org.soapui.SoapUI/.soapuios/soapui.properties`
 
 This variables has been set by coping the functionality of the `soapui.sh` into the `soapui-launcher.sh` (in this repository) since the former don't allow us to change the `JAVA_OPTS`.
+Additional custom `JAVA_OPTS` can now also be added using flatseal app or `flatpak override`.
+Example for HiDPI:
+```shell
+flatpak override --user --env=JAVA_OPTS="-Dsun.java2d.uiScale=2" org.soapui.SoapUI
+```
 
 Also since SoapUI is using the root of the home folder to store some configuration files (`soapui-settings.xml` and `default-soapui-workspace.xml`), the launcher (if they don't already exist) symlinks them into the `.soapuios` folder so that the settings can be persisted.

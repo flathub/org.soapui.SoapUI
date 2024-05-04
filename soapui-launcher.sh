@@ -5,6 +5,7 @@ SOAPUI_HOME="/app"
 SOAPUI_JAR=`ls /app/bin/soapui-*.jar`
 JFXRTPATH="/app/jre/lib/jfxrt.jar"
 SOAPUI_CLASSPATH=$JFXRTPATH:$SOAPUI_JAR:$SOAPUI_HOME/lib/*:$XDG_DATA_HOME/soapuios/lib/*
+USER_JAVA_OPTS="$JAVA_OPTS"
 
 # Using ~/.soapuios since it is already hardcoded in SoapUI for other files
 SOAPUI_CONFIG_HOME="$HOME/.soapuios"
@@ -36,6 +37,12 @@ JAVA_OPTS="$JAVA_OPTS -Dwsi.dir=${SOAPUI_HOME}/wsi-test-tools"
 JAVA_OPTS="$JAVA_OPTS -Dlog4j2.formatMsgNoLookups=true"
 #JAVA 16
 #JAVA_OPTS="$JAVA_OPTS --illegal-access=permit"
+
+# Allow custom user JAVA_OPTS overrides
+if [ -n "$USER_JAVA_OPTS" ]; then
+  echo "WARNING: Adding additional user JAVA_OPTS: $USER_JAVA_OPTS" > /dev/stderr
+  JAVA_OPTS="$JAVA_OPTS $USER_JAVA_OPTS"
+fi
 
 export PATH
 export SOAPUI_HOME
