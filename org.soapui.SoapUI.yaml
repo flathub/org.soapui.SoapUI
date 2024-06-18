@@ -38,9 +38,12 @@ modules:
         sha256: 5e0d5a781fca439ccc9490031429e7a7303a89031394c80eed82ae596f18ea82
         dest: app
         x-checker-data:
-          type: html
-          url: https://www.soapui.org/downloads/latest-release/
-          pattern: <option data-href="(https://dl.eviware.com/soapuios/([^/]+)/SoapUI-[^/]+-linux-bin.tar.gz)">
+          type: json
+          url: https://api.github.com/repos/SmartBear/soapui/releases/latest
+          version-query: .tag_name | sub("^v"; "")
+          timestamp-query: .published_at
+          url-query: >-
+            "https://dl.eviware.com/soapuios/\($version)/SoapUI-\($version)-linux-bin.tar.gz"
       - type: file
         path: soapui-launcher.sh
 
