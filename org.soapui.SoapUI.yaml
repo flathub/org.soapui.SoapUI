@@ -34,8 +34,8 @@ modules:
       - /bin/listeners
     sources:
       - type: archive
-        url: https://dl.eviware.com/soapuios/5.7.2/SoapUI-5.7.2-linux-bin.tar.gz
-        sha256: a53d1900d542ed2bfbcf13033d8f3a69c94850665e6b339969d89556c9848edc
+        url: https://dl.eviware.com/soapuios/5.8.0/SoapUI-5.8.0-linux-bin.tar.gz
+        sha256: 5e0d5a781fca439ccc9490031429e7a7303a89031394c80eed82ae596f18ea82
         dest: app
         x-checker-data:
           type: html
