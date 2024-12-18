@@ -49,7 +49,16 @@
   -->
   <releases>
     <release version="5.8.0" date="2024-12-18">
-      <description></description>
+      <description>
+        <p>Updated the Opt-in to Stay Tuned invite</p>
+        <p>Added AES256 project encryption support</p>
+        <p>Updated Java to v17.0.12</p>
+        <p>Updated JavaFX to v17.0.12</p>
+        <p>Upgrade Groovy to 3.0.8</p>
+        <p>Update com.graphql-java:graphql-java in SoapUI to 17.4.0</p>
+        <p>MacOS (ARM 64 bit) installer available with 5.8.0</p>
+        <p>Made some styling updates to Endpoint Explorer after upgrade to Java 17</p>
+      </description>
     </release>
     <release version="5.7.2" date="2023-11-07">
       <description>
