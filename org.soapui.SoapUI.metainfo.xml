@@ -48,6 +48,9 @@
       https://github.com/SmartBear/soapui/releases
   -->
   <releases>
+    <release version="5.9.1" date="2025-09-10">
+      <description></description>
+    </release>
     <release version="5.9.0" date="2025-07-16">
       <description>
         <p>Fix content-type check for XML.</p>
