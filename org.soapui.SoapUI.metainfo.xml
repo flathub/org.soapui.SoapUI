@@ -48,6 +48,16 @@
       https://github.com/SmartBear/soapui/releases
   -->
   <releases>
+    <release version="5.10.0" date="2026-06-02">
+      <description>
+        <p>Updated Swagger Inflector and Apache Commons FileUpload to address reported security vulnerabilities.</p>
+        <p>Updated slf4j, log4j, htmlunit, dom4j, and xstream to newer versions to resolve multiple CVEs.</p>
+        <p>Disabled Mixpanel usage analytics and cleaned up related code.</p>
+        <p>Fixed and refreshed links in the SoapUI Help menu, and removed outdated entries.</p>
+        <p>Updated links in the Help menu and removed outdated entries.</p>
+        <p>Updated the landing page message to celebrate 20 years of SoapUI and invite users to join the community thread</p>
+      </description>
+    </release>
     <release version="5.9.1" date="2025-09-10">
       <description>
         <p>Fix help links.</p>
