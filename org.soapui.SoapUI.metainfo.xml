@@ -48,6 +48,9 @@
       https://github.com/SmartBear/soapui/releases
   -->
   <releases>
+    <release version="5.10.1" date="2026-11-20">
+      <description></description>
+    </release>
     <release version="5.10.0" date="2026-06-02">
       <description>
         <p>Updated Swagger Inflector and Apache Commons FileUpload to address reported security vulnerabilities.</p>
