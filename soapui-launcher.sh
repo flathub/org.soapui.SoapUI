@@ -23,7 +23,7 @@ mkdir -p "$SOAPUI_CONFIG_HOME" "$SOAPUI_EXT_LIBRARIES" "$SOAPUI_EXT_LISTENERS" "
 [ -e "$HOME/soapui-settings.xml" ] || ln -s "$SOAPUI_CONFIG_HOME/soapui-settings.xml" "$HOME/soapui-settings.xml"
 
 #JAVA OPTS
-JAVA_OPTS="-Xms128m -Xmx1024m -XX:MinHeapFreeRatio=20 -XX:MaxHeapFreeRatio=40"
+JAVA_OPTS="-Xms128m -Xmx1024m -XX:MinHeapFreeRatio=20 -XX:MaxHeapFreeRatio=40 -XX:-UseBASE64Intrinsics"
 JAVA_OPTS="$JAVA_OPTS -Dsoapui.properties=${SOAPUI_CONFIG_HOME}/soapui.properties"
 JAVA_OPTS="$JAVA_OPTS -Dsoapui.home=${SOAPUI_HOME}/bin -splash:SoapUI-Spashscreen.png"
 JAVA_OPTS="$JAVA_OPTS -Dsoapui.ext.libraries=${SOAPUI_EXT_LIBRARIES}"
@@ -35,8 +35,8 @@ JAVA_OPTS="$JAVA_OPTS -Dwsi.dir=${SOAPUI_HOME}/wsi-test-tools"
 #JAVA_OPTS="$JAVA_OPTS -Dsoapui.browser.disabled=true"
 #CVE-2021-44228
 JAVA_OPTS="$JAVA_OPTS -Dlog4j2.formatMsgNoLookups=true"
-#JAVA 16
-#JAVA_OPTS="$JAVA_OPTS --illegal-access=permit"
+#JAVA 17
+JAVA_OPTS="$JAVA_OPTS --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.lang.invoke=ALL-UNNAMED --add-opens java.desktop/java.beans=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens java.xml/com.sun.org.apache.xerces.internal.util=ALL-UNNAMED --add-opens java.base/java.net=ALL-UNNAMED --add-opens java.desktop/java.awt=ALL-UNNAMED --add-opens java.desktop/javax.swing=ALL-UNNAMED --add-opens java.base/sun.net.www=ALL-UNNAMED --add-opens java.base/sun.net.www.protocol.https=ALL-UNNAMED --add-opens java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-opens java.desktop/javax.swing.plaf=ALL-UNNAMED --add-opens java.desktop/javax.swing.plaf.basic=ALL-UNNAMED --add-opens jdk.jdi/com.sun.jdi=ALL-UNNAMED --add-opens java.prefs/java.util.prefs=ALL-UNNAMED"
 
 # Allow custom user JAVA_OPTS overrides
 if [ -n "$USER_JAVA_OPTS" ]; then
